@@ -2,6 +2,7 @@ package com.example.demo.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -19,5 +20,14 @@ public class FighterService {
 	    List<Fighter> fighters = new ArrayList<>();
 	    fighterRepository.findAll().forEach(fighters::add);
 	    return fighters;
+	}
+	public Fighter getFighterById(Long id) {
+		Optional<Fighter> fighter = fighterRepository.findById(id);
+		if(fighter.isPresent()) {
+			return fighter.get();
+		}	
+		else {
+			return null;
+		}
 	}
 }

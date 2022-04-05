@@ -25,4 +25,7 @@ public class Fighter {
 		this.surname = surname;
 		this.age = age;
 	}
+	public Fighter() {
+		// TODO Auto-generated constructor stub
+	}
 }
