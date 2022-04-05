@@ -30,4 +30,17 @@ public class FighterService {
 			return null;
 		}
 	}
+	public Fighter updateFighter(Fighter fighter) {
+		Optional<Fighter> fighterData = fighterRepository.findById(fighter.id);
+		if(fighterData.isPresent()) {
+			Fighter newFighter = fighterData.get();
+			newFighter.age = fighter.age;
+			newFighter.name = fighter.name;
+			newFighter.surname = fighter.surname;
+			return fighterRepository.save(newFighter);
+		}
+		else {
+			return null;
+		}
+	}
 }
