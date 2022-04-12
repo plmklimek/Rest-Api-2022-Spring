@@ -19,13 +19,18 @@ public class Fighter {
 	public String surname;
 	@Column(name = "age")
 	public int age;
+	public Fighter() {
+		super();
+	}
 	public Fighter(Long id, String name, String surname, int age) {
 		this.id = id;
 		this.name = name;
 		this.surname = surname;
 		this.age = age;
 	}
-	public Fighter() {
-		// TODO Auto-generated constructor stub
+	public Fighter(String name, String surname, int age) {
+		this.name = name;
+		this.surname = surname;
+		this.age = age;
 	}
 }

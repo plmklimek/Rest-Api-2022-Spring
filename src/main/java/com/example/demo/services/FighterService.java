@@ -43,4 +43,11 @@ public class FighterService {
 			return null;
 		}
 	}
+	public Fighter createFighter(Fighter fighter) {
+		return fighterRepository.save(fighter);
+	}
+	public Boolean removeFighter(Long id) {
+		fighterRepository.deleteById(id);
+		return true;
+	}
 }

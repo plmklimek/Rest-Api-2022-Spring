@@ -28,6 +28,11 @@ public class Fight {
 	public Fight() {
 		super();
 	}
+	public Fight(int blue_id, int red_id, Date date) {
+		this.blue_fighter = blue_id;
+		this.red_fighter = red_id;
+		this.date = date;
+	}
 	public Fight(Long id, int blue, int red, Date date) {
 		this.id = id;
 		this.blue_fighter = blue;
